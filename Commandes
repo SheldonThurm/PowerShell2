@@ -1,0 +1,46 @@
+PS C:\Users\Sheldon> New-Item -ItemType Directory -Path C:/ -Name EvenFolder
+
+
+    Répertoire : C:\
+
+
+Mode                 LastWriteTime         Length Name                                                                                                  
+----                 -------------         ------ ----                                                                                                  
+d-----        13/03/2025     16:39                EvenFolder                                                                                            
+
+
+
+PS C:\Users\Sheldon> New-Item -ItemType Directory -Path C:/ -Name OddFolder
+
+
+    Répertoire : C:\
+
+
+Mode                 LastWriteTime         Length Name                                                                                                  
+----                 -------------         ------ ----                                                                                                  
+d-----        13/03/2025     16:39                OddFolder  
+
+
+PS C:\Users\Sheldon> Set-Location C:\FolderTest1
+
+PS C:\FolderTest1> Move-Item -Path File1 -Destination C:\OddFolder
+
+PS C:\FolderTest1> Move-Item -Path File3 -Destination C:\OddFolder
+
+PS C:\FolderTest1> Move-Item -Path File5 -Destination C:\OddFolder
+
+PS C:\FolderTest1> Move-Item -Path File2 -Destination C:\EvenFolder
+
+PS C:\FolderTest1> Move-Item -Path File4 -Destination C:\EvenFolder
+
+PS C:\FolderTest1> Set-Location C:\FolderTest2
+
+PS C:\FolderTest2> Move-Item -Path File6 -Destination C:\EvenFolder
+
+PS C:\FolderTest2> Move-Item -Path File8 -Destination C:\EvenFolder
+
+PS C:\FolderTest2> Move-Item -Path File10 -Destination C:\EvenFolder
+
+PS C:\FolderTest2> Move-Item -Path File7 -Destination C:\OddFolder
+
+PS C:\FolderTest2> Move-Item -Path File9 -Destination C:\OddFolder
